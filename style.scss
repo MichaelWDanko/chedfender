@@ -1,0 +1,112 @@
+$ink: #1f2042;
+$pample: #ff5757;
+
+$large-break: 1500px;
+$medium-break: 1200px;
+$small-break: 600px;
+
+html {
+    height: 100%;
+    width: 100%;
+    background-image: url("he1.jpg");
+}
+
+body {
+    background-color: $ink;
+    margin: 0;
+    opacity: 0.9;
+}
+
+#inkOverlay {
+    //    background-color: $ink;
+    opacity: 1.0;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.quoteBox {
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    background-color: $pample;
+//    width: 40%;
+    min-width: 300px;
+    height: 20%;
+    min-height: 120px;
+    margin-top: 10%;
+    border-radius: 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    color: white;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-weight: 400;
+}
+
+#quoteHeader,
+#quoteBody {
+    text-align: center;
+}
+
+span {
+    font-weight: bold;
+}
+
+@media (max-width: $small-break) {
+    .quoteBox {
+        width: 95%;
+        height: 45%
+    }
+    
+    #quoteHeader {
+        font-size: 1em;
+    }
+    #quoteBody {
+        font-size: .9em;
+    }
+}
+
+@media (min-width: $small-break) and (max-width: $medium-break) {
+    .quoteBox {
+        width: 60%;
+        height: 30%
+    }
+    
+    #quoteHeader {
+        font-size: 1.5em;
+    }
+    #quoteBody {
+        font-size: 1em;
+    }
+}
+
+@media (min-width: $medium-break) {
+    .quoteBox {
+        width: 50%;
+        height: 20%;
+    }
+    
+    #quoteHeader {
+        font-size: 2em;
+    }
+    
+    #quoteBody {
+        font-size: 1.2em;
+    }
+}
